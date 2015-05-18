@@ -1,0 +1,5 @@
+Talentify website folder resides under
+/var/www/talentify.in/WebContent
+
+Istar website folder resides under
+/var/www/istarindia.com/WebContent
