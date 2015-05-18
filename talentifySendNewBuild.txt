@@ -1,0 +1,67 @@
+WINDOWS
+---------------
+
+1) Zip the talentify working directory from your computer
+
+2) Use WinSCP and upload the zip file
+
+3) Logout from WinSCP
+
+4) Use Putty to start a remote session with talentify
+
+5) Login with your username/password
+
+6) Use sudo su - to login with root permissions
+
+7) Enter password for sudo
+
+8) 
+Copy the uploaded zip file from your home directory to /root/
+
+cp /home/<yourhomedirname>/<talentify.zip> /root/
+
+9) Get the pid (process id) of the talentify web app
+
+ps ax | grep node
+
+10) Kill the talentify web app
+
+kill -9 <node-process-id>
+
+11) Any content uploaded to talentify will be saved under /root/lepo-new/uploads.
+
+It's always good to maintain a backup of all the uploaded files in a separate directory /root/uploads
+
+When the new build is being sent, we need to retain the /uploads directory.
+
+Before deleting the 'lepo-new' (talentify working directory), save a copy of the /uploads directory
+
+cp -r lepo-new/uploads /root/
+
+12) Delete the talentify working directory
+
+rm -rf lepo-new
+
+13) Unzip the newly uploaded talentify zip file
+
+unzip <talentify.zip> 
+
+14) Remove the zip file
+
+rm <talentify.zip>
+
+15) Copy the /uploads directory into talentify working directory
+
+cp -r /uploads lepo-new/
+
+16) cd (change dir) to lepo-new
+
+cd lepo-new
+
+17) nvm use v0.10.26
+
+//to esure the right node version is being used
+
+18) nohup node app &
+
+//run talentify as a background process

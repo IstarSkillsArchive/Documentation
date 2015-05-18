@@ -1,0 +1,58 @@
+Server hardening instructions
+------------------------------
+http://articles.slicehost.com/2008/11/28/ubuntu-intrepid-setup-page-1
+
+
+Allowed port numbers
+-----------------------
+Define the allowed port numbers in iptables.up.rules (please refer the above url)
+
+
+SSL Certificates
+-----------------------
+1) Place the certificates in some folder
+/etc/apache2/ssl
+
+2) Write conditions in
+/etc/apache2/sites-enabled/talentify.in.conf
+
+3) a2enmod ssl
+
+4) serice apache2 restart
+
+
+Auto redirect to https
+-------------------------
+1) /etc/apache2/sites-enabled/talentify.in.conf
+
+<*:443> HTTPS
+</>
+
+<*:80> HTTP
+</>
+
+2) a2enmod rewrite
+
+3) Write all rewriteEngine rules
+
+
+To add new user
+----------------------
+1) adduser <newusername>
+
+2) visudo
+At the end of the file add:
+<newusername>   ALL=(ALL) ALL
+
+3)vi /etc/ssh/sshd_config
+At the end of the file append the newly added user:
+AllowUsers <newusername>
+
+4) service ssh restart
+
+
+
+
+
+
+

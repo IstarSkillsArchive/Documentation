@@ -1,0 +1,28 @@
+GODADDY
+----------
+login: sreeramanv
+password: V@idy123!
+
+
+DIGITALOCEAN
+--------------
+Login: sreeram@istarindia.com
+password: T@lentify123
+
+
+ZOOM
+-------
+login: sreeram@istarindia.com
+password: vaidy123
+
+
+TWILIO
+---------
+login: sreeram@istarindia.com
+password: Twili0123!
+
+
+GITHUB
+----------
+login: sreeram@istarindia.com
+password: istar2015
