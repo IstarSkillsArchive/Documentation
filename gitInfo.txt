@@ -1,0 +1,51 @@
+Create a github account
+
+Login as sreeram, add any new (private) repository you want to create 
+
+Go to the team view, add members to this newly created repository
+
+Open git bash locally
+
+Change to the local directory you wish to push onto this new (or existing) repository
+
+Initialize git in this local directory (first time only)
+>> git init
+
+Add files to this folder (if the directory is empty)
+
+You need to select what gets pushed onto the github repo
+
+	a) To add a single (or a particular file) 
+	>> git add <fileName>
+
+	b) To add the whole directory
+	>> git add .
+
+At any point, you can check the status of your newly added files
+>> git status
+
+At any point, you can get a log of all the commits
+>> git log
+
+After a file (or files) is (have been) added, you need to commit with a message
+>> git commit -m "some message"
+
+If a repository has been newly created, then we need to connect the local directory with this new repository
+	>> git remote add <name> <github repository url>
+	Eg for <name>: origin
+	Eg for <github repository url>: https://github.com/ISTARSkills/Documentation.git
+
+At any point, you can check the git repositories associated with this local directory
+>>git remote -v
+
+Once the local files have been committed, it's now time to push them to github
+	>> git push <name> master
+	where <name> refers to the same name used in "git remote add <name> <github repository url>" command
+	Enter your github username and password when prompted
+
+The files are now on github
+
+
+
+
+
