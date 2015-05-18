@@ -1,0 +1,31 @@
+Login to the talentify droplet using Putty
+
+1) Connect to postgres db
+
+sudo su - postgres
+psql
+\c
+
+2) List databases
+\list
+
+3) List all databases
+\dt
+
+4) Create database
+CREATE DATABASE <dbName>
+
+5) Delete database
+DROP DATABASE <dbName>
+
+6) Alter table, change data type
+alter table <"TableName"> alter column <"columnName"> set data type <dataType>
+
+7) Alter table, add column
+alter table <"TableName"> add column <"columnName">
+
+8) Alter table, rename column
+alter table <"TableName"> rename column <"columnName1"> to <"columnName2"> 
+
+9) Alter table, drp column
+alter table <"TableName"> drop column <"columnName"> 
