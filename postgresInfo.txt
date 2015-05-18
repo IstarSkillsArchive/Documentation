@@ -9,7 +9,7 @@ psql
 2) List databases
 \list
 
-3) List all databases
+3) List all tables
 \dt
 
 4) Create database
